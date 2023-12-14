@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRYSTALpytools.base.inputbase module &mdash; CRYSTALpytools 2023.10.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="canonical" href="https://crystal-code-tools.github.io/CRYSTALpytools/crystalpytools.base.inputbase.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=ddecebb9"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CRYSTALpytools.base.plotbase module" href="crystalpytools.base.plotbase.html" />
+    <link rel="prev" title="CRYSTALpytools.base.crysout module" href="crystalpytools.base.crysout.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            CRYSTALpytools
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#create-a-conda-anaconda-environment">Create a conda/anaconda environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#install-crystalpytools">Install CRYSTALpytools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#set-the-path-to-runcry-and-runprop">Set the path to runcry and runprop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#testing">Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples_and_tutorials.html">Examples and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="crystalpytools.html">Module-specific Docs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="crystalpytools.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="crystalpytools.adsorb.html">CRYSTALpytools.adsorb module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crystalpytools.calculate.html">CRYSTALpytools.calculate module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crystalpytools.convert.html">CRYSTALpytools.convert module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crystalpytools.crystal_io.html">CRYSTALpytools.crystal_io module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crystalpytools.execute.html">CRYSTALpytools.execute module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crystalpytools.geometry.html">CRYSTALpytools.geometry module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crystalpytools.plot.html">CRYSTALpytools.plot module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crystalpytools.thermodynamics.html">CRYSTALpytools.thermodynamics module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="crystalpytools.html#developers">Developers</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="crystalpytools.base.basisset.html">CRYSTALpytools.base.basisset module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crystalpytools.base.crysd12.html">CRYSTALpytools.base.crysd12 module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crystalpytools.base.crysout.html">CRYSTALpytools.base.crysout module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CRYSTALpytools.base.inputbase module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crystalpytools.base.plotbase.html">CRYSTALpytools.base.plotbase module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="crystalpytools.base.propout.html">CRYSTALpytools.base.propout module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CRYSTALpytools</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="crystalpytools.html">CRYSTALpytools Package</a></li>
+      <li class="breadcrumb-item active">CRYSTALpytools.base.inputbase module</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/crystal-code-tools/CRYSTALpytools/blob/main/docs_source/crystalpytools.base.inputbase.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="crystalpytools-base-inputbase-module">
+<h1>CRYSTALpytools.base.inputbase module<a class="headerlink" href="#crystalpytools-base-inputbase-module" title="Link to this heading"></a></h1>
+<p id="ref-base-inputbase">Python wrapper for CRYSTAL inputs. Provides basic classes, methods and attributes to read, operate and write CRYSTAL d12/d3 files.</p>
+<section id="structure-of-classes">
+<h2>Structure of classes<a class="headerlink" href="#structure-of-classes" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>CRYSTAL keywords are used as methods. Calling a method modifies the corresponding attributes.</p></li>
+<li><p>Keyword-like attributes (keyword not closed by ‘END’) are named as <code class="docutils literal notranslate"><span class="pre">_attr</span></code> and the corresponding method should be <code class="docutils literal notranslate"><span class="pre">attr()</span></code>.</p></li>
+<li><p>Block-like attributes (keyword closed by ‘END’) are named as <code class="docutils literal notranslate"><span class="pre">_block_attr</span></code>. The corresponding method is <code class="docutils literal notranslate"><span class="pre">set_attr()</span></code>. Another method with <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> decorator should be set in such way that when called without <code class="docutils literal notranslate"><span class="pre">_block_attr</span></code> existing, create a new one, otherwise return to it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_block_bg</span></code> attribute has the keyword or undefined 1st line of a block. In class Optgeom, that is ‘OPTGEOMn’ and in Geom, that is title line. When it is empty, it should be set as <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p>Similarly, <code class="docutils literal notranslate"><span class="pre">_block_ed</span></code> attribute has the ending line of a block. In class BasisSet, by default that is ‘ENDBSn’. When it is empty, it should be set as <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p>When <code class="docutils literal notranslate"><span class="pre">_block_bg</span></code> and <code class="docutils literal notranslate"><span class="pre">_block_ed</span></code> are both <code class="docutils literal notranslate"><span class="pre">''</span></code> (note that is not <code class="docutils literal notranslate"><span class="pre">None</span></code>), the whole block is regarded as empty and its data will not be updated.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">_block_data</span></code> attribute stored the d12/d3 formatted text of the whole block.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">_block_dict</span></code> attribute is a dictionary whose keys are CRYSTAL keywords and values are corresponding attributes. The sequence of key-value pairs should follow the requirement of d12/d3 files. For example, in Geom class, the ‘OPTGEOM’ keyword and corresponding attribute should always be placed after the ‘SUPERCEL’ keyword.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_block_key</span></code> and <code class="docutils literal notranslate"><span class="pre">_block_value</span></code> are sorted, non-repeated lists of keys and values defined in <code class="docutils literal notranslate"><span class="pre">_block_dict</span></code>.</p></li>
+</ol>
+</section>
+<section id="add-keyword-related-methods">
+<h2>Add keyword-related methods<a class="headerlink" href="#add-keyword-related-methods" title="Link to this heading"></a></h2>
+<p>Layer 1: <code class="docutils literal notranslate"><span class="pre">Crystal_inputBASE</span></code> or <code class="docutils literal notranslate"><span class="pre">Properties_inputBASE</span></code> Objects.</p>
+<p>Layer 2: 3 basic blocks, Geom, BasisSet and SCF. A BlockBASE class should be created.</p>
+<p>Layer 3: Sub-blocks closed by END, such as ‘OPTGEOM’. A BlockBASE class should be created.</p>
+<blockquote>
+<div><p>Layer 2 and 3 should be created as the value of <code class="docutils literal notranslate"><span class="pre">_block_attr</span></code> attribute of the upper layer, with corresponding <code class="docutils literal notranslate"><span class="pre">set_attr</span></code> method and <code class="docutils literal notranslate"><span class="pre">attr()</span></code> method decorated by <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code></p>
+</div></blockquote>
+<p>Layer 4: Keyword-like inputs.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Keywords with ‘matrix-like’ (ndimen*ndimen) inputs, such as ‘SUPERCEL’. Use <code class="docutils literal notranslate"><span class="pre">set_matrix</span></code> + <code class="docutils literal notranslate"><span class="pre">assign_keyword</span></code>.</p></li>
+<li><p>Keywords with ‘list-like’ (nline + a list of nline, or 1 line of multiple values) inputs, such as ‘ATOMSPIN’. Use <code class="docutils literal notranslate"><span class="pre">set_list</span></code> + <code class="docutils literal notranslate"><span class="pre">assign_keyword</span></code>.</p></li>
+<li><p>Keywords with 0 or 1 line input, such as ‘TOLDEE’ and ‘CVOLOPT’. Use <code class="docutils literal notranslate"><span class="pre">assign_keyword</span></code>.</p></li>
+<li><p>Other irregular keywords, such as ‘SHRINK’. Design a special scheme and use <code class="docutils literal notranslate"><span class="pre">assign_keyword</span></code>.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="address-conflicts">
+<h2>Address conflicts<a class="headerlink" href="#address-conflicts" title="Link to this heading"></a></h2>
+<p>To address conflicts between 2 ‘keyword-like’ inputs, one can simply direct 2 different keywords to the same attribute. For example, both ‘SUPERCEL’ and ‘SCELPHONO’ keywords directs to the <code class="docutils literal notranslate"><span class="pre">_sp_matrix</span></code> attribute of Geom object. By setting either one the other is automatically covered.</p>
+<p>To address conflicts involving ‘block-like’ inputs, the <code class="docutils literal notranslate"><span class="pre">clean_conflict</span></code> method should be used. Check the explanations below.</p>
+</section>
+<section id="planned-developments">
+<h2>Planned developments<a class="headerlink" href="#planned-developments" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Add Properties_inputBASE</p></li>
+<li><p>Redo ‘FIXINDEX’ of SCF block. Make an individual class for GEOM / BASE / GEBA. The current implementation does not support GEBA.</p></li>
+<li><p>Add CPHF / QHA / EOS blocks</p></li>
+</ol>
+<p id="module-CRYSTALpytools.base.inputbase">Base object of all the input (d12/d3) blocks.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="CRYSTALpytools.base.inputbase.BlockBASE">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BlockBASE</span></span><a class="headerlink" href="#CRYSTALpytools.base.inputbase.BlockBASE" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The base class of ‘block’ objects</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="CRYSTALpytools.base.inputbase.BlockBASE.analyze_text">
+<span class="sig-name descname"><span class="pre">analyze_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CRYSTALpytools.base.inputbase.BlockBASE.analyze_text" title="Link to this definition"></a></dt>
+<dd><p>Analyze the input text and return to corresponding attributes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CRYSTALpytools.base.inputbase.BlockBASE.assign_keyword">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">assign_keyword</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CRYSTALpytools.base.inputbase.BlockBASE.assign_keyword" title="Link to this definition"></a></dt>
+<dd><p>Transform value into string formats.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – CRYSTAL keyword</p></li>
+<li><p><strong>shape</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – 1D list. Shape of input text. Length: Number of
+lines; Element: Number of values</p></li>
+<li><p><strong>value</strong> (<em>list</em><em> | </em><em>str</em>) – List, a 1D list of arguments; <code class="docutils literal notranslate"><span class="pre">None</span></code> or a list
+begins with <code class="docutils literal notranslate"><span class="pre">None</span></code>, return to keyword only; <code class="docutils literal notranslate"><span class="pre">''</span></code> or a list begins
+with <code class="docutils literal notranslate"><span class="pre">''</span></code>, Clean everything</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>text</strong> (<em>str</em>) – CRYSTAL input</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CRYSTALpytools.base.inputbase.BlockBASE.clean_block">
+<span class="sig-name descname"><span class="pre">clean_block</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CRYSTALpytools.base.inputbase.BlockBASE.clean_block" title="Link to this definition"></a></dt>
+<dd><p>Clean all the keyword-related attributes (accessible attributes).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method directly deletes all the attributes. Alternatively, by
+setting an attribute with ‘’, the attribute is kept but its old
+values are erased.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CRYSTALpytools.base.inputbase.BlockBASE.clean_conflict">
+<span class="sig-name descname"><span class="pre">clean_conflict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newattr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conflict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CRYSTALpytools.base.inputbase.BlockBASE.clean_conflict" title="Link to this definition"></a></dt>
+<dd><p>Addressing the conflictions between attributes, usually between blocks
+or block and keywords. For conflictions between keywords, they are set
+to direct the same attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>newattr</strong> (<em>str</em>) – The attribute explicitly specified.</p></li>
+<li><p><strong>conflict</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – The list of conflicting attributes including
+the called one. ‘Real’ attributes (begins with ‘_’) are needed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="CRYSTALpytools.base.inputbase.BlockBASE.data">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#CRYSTALpytools.base.inputbase.BlockBASE.data" title="Link to this definition"></a></dt>
+<dd><p>Settings in all the attributes are summarized here.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CRYSTALpytools.base.inputbase.BlockBASE.set_list">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CRYSTALpytools.base.inputbase.BlockBASE.set_list" title="Link to this definition"></a></dt>
+<dd><p>Set list-like data to get assign_keyword inputs. Used for lists with
+known dimensions. Such as atom coordinate list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>*args</strong> – <code class="docutils literal notranslate"><span class="pre">''</span></code>, Clean data; <code class="docutils literal notranslate"><span class="pre">None</span></code>, Return keyword only;
+<code class="docutils literal notranslate"><span class="pre">int,</span> <span class="pre">list</span></code>, int for length of the list, list for list data</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>shape</strong> (<em>list</em>) – 1 + length 1D list or []</p></li>
+<li><p><strong>args</strong> (<em>list</em>) – Flattened list, [] or ‘’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CRYSTALpytools.base.inputbase.BlockBASE.set_matrix">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CRYSTALpytools.base.inputbase.BlockBASE.set_matrix" title="Link to this definition"></a></dt>
+<dd><p>Set matrix-like data to get assign_keyword inputs. Used for supercell
+expansion matrix and strain tensor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mx</strong> (<em>list</em><em> | </em><em>str</em>) – <code class="docutils literal notranslate"><span class="pre">ndimen*ndimen</span></code> list, <code class="docutils literal notranslate"><span class="pre">None</span></code>, or <code class="docutils literal notranslate"><span class="pre">''</span></code></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>shape</strong> (<em>list</em>) – <code class="docutils literal notranslate"><span class="pre">ndimen*1</span></code> 1D list. All elements are ndimen.</p></li>
+<li><p><strong>value</strong> (<em>list</em>) – <code class="docutils literal notranslate"><span class="pre">ndimen*2*1</span></code> 1D list. Flattened matrix.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CRYSTALpytools.base.inputbase.BlockBASE.update_block">
+<span class="sig-name descname"><span class="pre">update_block</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CRYSTALpytools.base.inputbase.BlockBASE.update_block" title="Link to this definition"></a></dt>
+<dd><p>Update the <code class="docutils literal notranslate"><span class="pre">_block_data</span></code> attribute: Summarizing all the settings to
+<code class="docutils literal notranslate"><span class="pre">_block_data</span></code> attribute for inspection and print</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="crystalpytools.base.crysout.html" class="btn btn-neutral float-left" title="CRYSTALpytools.base.crysout module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="crystalpytools.base.plotbase.html" class="btn btn-neutral float-right" title="CRYSTALpytools.base.plotbase module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, CRYSTALpytools Development Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
